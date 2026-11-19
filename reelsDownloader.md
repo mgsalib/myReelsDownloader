@@ -11,17 +11,18 @@ Load this skill when the user provides a social media account (Instagram handle/
 
 ## Collect from user first (ask before doing anything)
 
-Before starting, ask the user these two questions:
+Before starting, ask the user these three questions:
 
 1. **What is the Social Media Account URL(s)?** — Instagram profile URL(s) and/or TikTok profile URL(s) to download saved/favourited media from. Accept one or many.
 2. **What is the Schedule Start and End Day and time?** — when should the daily/weekly sync run (e.g. "every Friday 1:00 PM to 10:00 PM" or "daily 09:00"). Used to create/update the Windows Task Scheduler job.
+3. **What is the Project Root Path?** — the local folder where all media will be saved (e.g. `D:\MyReels`). If the path does not exist, create it. New accounts get a subfolder created under it automatically.
 
-Only proceed after both answers are provided. Derive the username from the URL if not given separately.
+Only proceed after all three answers are provided. Derive the username from the URL if not given separately.
 
 ## Inputs (derive, do not ask if missing)
 
 - Account identifier: Instagram username/URL or TikTok username/URL.
-- Project root: `D:\MichaelGS\Projects\MyReels` (existing archive). New accounts: create a new subfolder under it.
+- Project root: provided by the user (question 3). Create the path if it does not exist; new accounts get a subfolder created under it.
 - Browser tab: use the in-app browser; user must be logged in to the account.
 
 ## Work loop (copy this order)
